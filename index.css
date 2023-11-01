@@ -318,9 +318,18 @@ summary {
 }
 
 .subtitle-block {
+	position: relative;
 	display: flex;
 	gap: 8px;
 	margin-bottom: 14px;
+}
+
+.bg-img {
+	position: absolute;
+	z-index: -1;
+	top: 142px;
+	right: -105px;
+	/*left: 50px; */
 }
 
 .subtitle-svg {
