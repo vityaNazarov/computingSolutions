@@ -648,12 +648,34 @@ summary {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	margin-bottom: 8px;
+	/* margin-bottom: 8px; */
+}
+
+.service-info-text-more {
+	display: none;
+}
+
+.service-info-text-secondary {
+	color: var(--Text);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 12px;
+	display: none;
+}
+
+.sevice-list-more {
+	padding-left: 15px;
+	margin-top: 12px;
+	margin-bottom: 24px;
+	display: none;
 }
 
 .service-btn {
 	display: flex;
 	align-items: center;
+	gap: 8px;
 	border: none;
 	background-color: transparent;
 	padding: 12px 24px 12px 0;
@@ -798,6 +820,25 @@ summary {
 
 /* !!!!!!!!!!!!!!!!!!!!! MODAL SEND MAIL */
 
+.send-mail-backdrop {
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(58, 58, 58, 0.755);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.send-mail-backdrop.active {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease-in-out;
+}
+
 .modal-title {
 	color: var(--Text);
 	font-size: 16px;
@@ -871,12 +912,18 @@ summary {
 	align-items: center;
 	gap: 8px;
 	margin: 0 auto;
-}
 
-.modal-btn-submit-text {
 	color: #e6e6f4;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
+}
+
+.modal-btn-submit-text {
+	/* color: #e6e6f4;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal; */
 }
