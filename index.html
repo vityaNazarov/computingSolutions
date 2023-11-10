@@ -141,6 +141,13 @@
 								<p class="header-logo-text">We can change things</p>
 							</div>
 						</a>
+						<div class="desktop-nav">
+							<nav class="header-nav">
+								<a href="./plans.html" class="header-nav-link">Services & Plans</a
+								><a href="./clients.html" class="header-nav-link">Clients</a
+								><a href="./contacts.html" class="header-nav-link">Contacts</a>
+							</nav>
+						</div>
 						<div class="backdrop">
 							<nav class="mobile-menu">
 								<a href="./plans.html" class="mobile-menu-text">Services & Plans</a>
@@ -194,7 +201,7 @@
 
 			<main class="main">
 				<section class="section">
-					<div class="container">
+					<div class="container main-container">
 						<h2 class="title main-title">We can change things!</h2>
 						<img
 							class="main-title-img"
@@ -219,8 +226,8 @@
 								world.</p
 							>
 						</div>
-						<div class="services"
-							><a class="services-link" href="./plans.html">View Services</a>
+						<a href="./plans.html#services" class="services"
+							><p class="services-link">View Services</p>
 							<svg
 								class="services-link-svg"
 								width="24"
@@ -244,7 +251,7 @@
 									stroke-linejoin="round"
 								/>
 							</svg>
-						</div>
+						</a>
 						<h2 class="title more-about-us">More about us</h2>
 						<div class="subtitle-block">
 							<svg
@@ -278,10 +285,66 @@
 							model and customized solutions.</p
 						>
 						<div class="gallery">
-							<img class="gallery-img" width="112" height="88" src="./img/img1.jpg" alt="image" />
-							<img class="gallery-img" width="52" height="88" src="./img/img2.jpg" alt="image" />
-							<img class="gallery-img" width="51" height="88" src="./img/img3.jpg" alt="image" />
-							<img class="gallery-img" width="110" height="88" src="./img/img4.jpg" alt="image" />
+							<picture>
+								<source
+									media="(min-width: 1280px)"
+									width="324"
+									height="204"
+									srcset="./img/main-gallery-big1.jpg"
+								/>
+								<img
+									class="gallery-img-big"
+									width="112"
+									height="88"
+									src="./img/img1.jpg"
+									alt="image"
+								/>
+							</picture>
+							<picture>
+								<source
+									media="(min-width: 1280px)"
+									width="154"
+									height="204"
+									srcset="./img/main-gallery-big2.jpg"
+								/>
+								<img
+									class="gallery-img-small"
+									width="52"
+									height="88"
+									src="./img/img2.jpg"
+									alt="image"
+								/>
+							</picture>
+							<picture>
+								<source
+									media="(min-width: 1280px)"
+									width="154"
+									height="204"
+									srcset="./img/main-gallery-big3.jpg"
+								/>
+								<img
+									class="gallery-img-small"
+									width="51"
+									height="88"
+									src="./img/img3.jpg"
+									alt="image"
+								/>
+							</picture>
+							<picture>
+								<source
+									media="(min-width: 1280px)"
+									width="324"
+									height="204"
+									srcset="./img/main-gallery-big4.jpg"
+								/>
+								<img
+									class="gallery-img-big"
+									width="110"
+									height="88"
+									src="./img/img4.jpg"
+									alt="image"
+								/>
+							</picture>
 						</div>
 						<div class="subtitle-block">
 							<svg
@@ -311,7 +374,15 @@
 								>What makes us different from other IT Services companies is our approach</p
 							>
 							<div class="bg-img">
-								<img width="355" height="406" src="./img/Component 2.jpg" alt="bg-img" />
+								<picture>
+									<source
+										media="(min-width: 1280px)"
+										width="741"
+										height="848"
+										srcset="./img/desktop-Component2.jpg"
+									/>
+									<img width="355" height="406" src="./img/Component 2.jpg" alt="bg-img" />
+								</picture>
 							</div>
 						</div>
 
@@ -360,7 +431,15 @@
 								time and money If you currently have preferred suppliers or contracts in place.</li
 							>
 						</ul>
-						<img class="main-img" src="./img/Image.jpg" alt="image" />
+						<picture>
+							<source
+								media="(min-width: 1280px)"
+								width="1004"
+								height="245"
+								srcset="./img/desktop-main-img.jpg"
+							/>
+							<img class="main-img" src="./img/Image.jpg" alt="image" />
+						</picture>
 						<p class="text"
 							>Computing Solutions will help you get the most out of these providers, ensuring your
 							hard earned dollars are getting what you paid for. We will take on the role of IT
@@ -386,11 +465,12 @@
 					</div>
 					<div class="privacy-policy">
 						<a href="./privacy.html" class="footer-privacy">Privacy Policy</a>
+						<span class="footer-items-border desktop-footer-items-border"></span>
 						<p class="footer-copyright">Copyright © 2014 San Francisco Bay Computing Solutions</p>
 					</div>
 				</div>
 			</footer>
 		</div>
 	</body>
-	<script defer src="./main.js"></script>
+	<script defer src="./script.js"></script>
 </html>

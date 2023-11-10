@@ -141,6 +141,13 @@
 								<p class="header-logo-text">We can change things</p>
 							</div>
 						</a>
+						<div class="desktop-nav">
+							<nav class="header-nav">
+								<a href="./plans.html" class="header-nav-link">Services & Plans</a
+								><a href="./clients.html" class="header-nav-link">Clients</a
+								><a href="./contacts.html" class="header-nav-link">Contacts</a>
+							</nav>
+						</div>
 						<div class="backdrop">
 							<nav class="mobile-menu">
 								<a href="./plans.html" class="mobile-menu-text">Services & Plans</a>
@@ -219,6 +226,7 @@
 						<button type="button" class="send-mail-btn" id="send-mail-btn"
 							><p class="send-mail-text">Write an email</p>
 							<svg
+								class="send-mail-svg"
 								width="20"
 								height="20"
 								viewBox="0 0 20 20"
@@ -241,6 +249,15 @@
 								/>
 							</svg>
 						</button>
+					</div>
+					<div>
+						<img
+							width="533"
+							height="610"
+							class="bg-img bg-img-contacts"
+							src="./img/desktop-Component2.jpg"
+							alt="image"
+						/>
 					</div>
 					<div class="send-mail-backdrop">
 						<div class="modal-send-mail">
@@ -267,26 +284,24 @@
 									/>
 								</svg>
 							</button>
-							<form action="#">
+							<form action="#" class="send-mail-form" id="mail-form" onsubmit="onSubmit(event)">
 								<label class="modal-label" for="">Name*</label>
 								<input
-									class="modal-input"
+									class="modal-input modal-input-name"
 									type="text"
 									placeholder="Enter your name"
 									name="user_name"
-									required
 								/>
 
 								<label class="modal-label" for="">Email*</label>
 								<input
-									class="modal-input"
+									class="modal-input modal-input-email"
 									type="email"
 									placeholder="Enter your email"
 									name="user_email"
-									required
 								/>
 
-								<label class="modal-label" for="">Phone number</label>
+								<label class="modal-label modal-label-tel" for="">Phone number</label>
 								<input
 									class="modal-input modal-input-last"
 									type="tel"
@@ -299,32 +314,33 @@
 									name="user_message"
 									placeholder="Enter your text"
 								></textarea>
+								<button class="modal-btn-submit" type="submit" id="modal-btn-submit"
+									>Send an email
+									<svg
+										class="modal-btn-submit-svg"
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M3.33341 3.33331H16.6667C17.5834 3.33331 18.3334 4.08331 18.3334 4.99998V15C18.3334 15.9166 17.5834 16.6666 16.6667 16.6666H3.33341C2.41675 16.6666 1.66675 15.9166 1.66675 15V4.99998C1.66675 4.08331 2.41675 3.33331 3.33341 3.33331Z"
+											stroke="#E6E6F4"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M18.3334 5L10.0001 10.8333L1.66675 5"
+											stroke="#E6E6F4"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</button>
 							</form>
-							<button class="modal-btn-submit" type="submit" id="modal-btn-submit"
-								>Send an email
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 20 20"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M3.33341 3.33331H16.6667C17.5834 3.33331 18.3334 4.08331 18.3334 4.99998V15C18.3334 15.9166 17.5834 16.6666 16.6667 16.6666H3.33341C2.41675 16.6666 1.66675 15.9166 1.66675 15V4.99998C1.66675 4.08331 2.41675 3.33331 3.33341 3.33331Z"
-										stroke="#E6E6F4"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M18.3334 5L10.0001 10.8333L1.66675 5"
-										stroke="#E6E6F4"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
-							</button>
 						</div>
 					</div>
 				</section>
@@ -341,11 +357,13 @@
 					</div>
 					<div class="privacy-policy">
 						<a href="./privacy.html" class="footer-privacy">Privacy Policy</a>
+						<span class="footer-items-border desktop-footer-items-border"></span>
 						<p class="footer-copyright">Copyright © 2014 San Francisco Bay Computing Solutions</p>
 					</div>
 				</div>
 			</footer>
 		</div>
 	</body>
-	<script defer src="./main.js"></script>
+
+	<script defer src="./script.js"></script>
 </html>

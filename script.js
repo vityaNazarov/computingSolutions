@@ -13,10 +13,10 @@ document.body.addEventListener("click", event => {
 
 // SEND-MAIL-BACKDROP
 
-document.addEventListener("DOMContentLoaded", function () {
-	document.getElementById("send-mail-btn").addEventListener("click", function () {
-		document.querySelector(".send-mail-backdrop").classList.add("active");
-	});
+const sendMailBtn = document.getElementById("send-mail-btn");
+
+sendMailBtn?.addEventListener("click", function () {
+	document.querySelector(".send-mail-backdrop").classList.add("active");
 });
 
 document.body.addEventListener("click", event => {
@@ -25,7 +25,9 @@ document.body.addEventListener("click", event => {
 	}
 });
 
-document.getElementById("modal-close").addEventListener("click", function () {
+const modalClose = document.getElementById("modal-close");
+
+modalClose?.addEventListener("click", function () {
 	document.querySelector(".send-mail-backdrop").classList.remove("active");
 });
 
@@ -34,7 +36,6 @@ document.getElementById("modal-close").addEventListener("click", function () {
 
 function readMore(btn) {
 	let post = btn.parentElement;
-	console.log(post);
 
 	if (post.querySelector(".service-dots").style.display === "none") {
 		post.querySelector(".service-dots").style.display = "block";
@@ -52,3 +53,24 @@ function readMore(btn) {
 		post.querySelector(".service-btn-svg").style.transform = "rotate(180deg)";
 	}
 }
+
+// FORM SUBMIT
+
+const onSubmit = e => {
+	const name = document.querySelector(".modal-input-name");
+	const email = document.querySelector(".modal-input-email");
+
+	if (name.value === "") {
+		name.classList.add("error");
+		e.preventDefault();
+	} else {
+		name.classList.remove("error");
+	}
+
+	if (email.value === "") {
+		email.classList.add("error");
+		e.preventDefault();
+	} else {
+		email.classList.remove("error");
+	}
+};
