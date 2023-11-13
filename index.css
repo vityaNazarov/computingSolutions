@@ -283,7 +283,7 @@ summary {
 	position: absolute;
 	/* top: 50%;
 	left: 50%; */
-	top: 20px;
+	top: 0px;
 	right: 0;
 	/* transform: translate(-50%, -50%); */
 	display: flex;
@@ -325,7 +325,7 @@ summary {
 /* <-- ==================== MAIN ==================== --> */
 
 .section {
-	margin-top: 174px;
+	margin-top: 110px;
 	margin-bottom: 56px;
 }
 
@@ -477,6 +477,7 @@ summary {
 .footer {
 	border-top: 1px solid var(--Text);
 	padding: 29px 0 27px;
+	background-color: #fff;
 }
 
 .footer-items-block {
@@ -844,6 +845,13 @@ summary {
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
+}
+
+.form-send-result {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!! PRIVACY POLICY */

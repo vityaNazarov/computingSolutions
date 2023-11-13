@@ -284,7 +284,12 @@
 									/>
 								</svg>
 							</button>
-							<form action="#" class="send-mail-form" id="mail-form" onsubmit="onSubmit(event)">
+							<form
+								action="#"
+								class="send-mail-form"
+								id="mail-form"
+								onsubmit="onSubmit(event);  return false;"
+							>
 								<label class="modal-label" for="">Name*</label>
 								<input
 									class="modal-input modal-input-name"
@@ -314,6 +319,7 @@
 									name="user_message"
 									placeholder="Enter your text"
 								></textarea>
+
 								<button class="modal-btn-submit" type="submit" id="modal-btn-submit"
 									>Send an email
 									<svg
@@ -365,5 +371,7 @@
 		</div>
 	</body>
 
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script defer src="./script.js"></script>
 </html>

@@ -57,20 +57,43 @@ function readMore(btn) {
 // FORM SUBMIT
 
 const onSubmit = e => {
-	const name = document.querySelector(".modal-input-name");
-	const email = document.querySelector(".modal-input-email");
+	// e.preventDefault();
+	const name = document.querySelector(".modal-input-name").value;
+	const email = document.querySelector(".modal-input-email").value;
+	const phone = document.querySelector(".modal-input-last").value;
+	const message = document.querySelector(".modal-textarea").value;
 
-	if (name.value === "") {
-		name.classList.add("error");
-		e.preventDefault();
+	if (name === "") {
+		// e.prevenDefault();
+		document.querySelector(".modal-input-name").classList.add("error");
 	} else {
-		name.classList.remove("error");
+		document.querySelector(".modal-input-name").classList.remove("error");
 	}
 
-	if (email.value === "") {
-		email.classList.add("error");
-		e.preventDefault();
+	if (email === "") {
+		// e.prevenDefault();
+		document.querySelector(".modal-input-email").classList.add("error");
 	} else {
-		email.classList.remove("error");
+		document.querySelector(".modal-input-email").classList.remove("error");
 	}
+
+	Email.send({
+		Host: "smtp.elasticemail.com",
+		Username: "yul1998vitya@gmail.com",
+		Password: "C35EAB3ADC8B1D9CD9C6C20D6DD0F1281366",
+		To: "yul1998vitya@gmail.com",
+		From: `${email}`,
+		Subject: `Message from ${name} `,
+		Body: `<p><strong>Name :</strong> ${name} </p>
+		<p><strong>Email :</strong> ${email}</p>
+		<p><strong>Phone :</strong> ${phone}</p>
+		<p><strong>Message :</strong> ${message}</p>`,
+	}).then(message => {
+		if (name !== "" && email !== "" && message === "OK") {
+			swal("Thanks!", "We will contact you shortly!", "success");
+			document.querySelector(".send-mail-form").reset();
+		} else {
+			swal("Noooo!", "you need to fill in all required fields!", "error");
+		}
+	});
 };
