@@ -82,7 +82,7 @@ const onSubmit = e => {
 		Username: "yul1998vitya@gmail.com",
 		Password: "C35EAB3ADC8B1D9CD9C6C20D6DD0F1281366",
 		To: "yul1998vitya@gmail.com",
-		From: `${email}`,
+		From: "yul1998vitya@gmail.com",
 		Subject: `Message from ${name} `,
 		Body: `<p><strong>Name :</strong> ${name} </p>
 		<p><strong>Email :</strong> ${email}</p>
@@ -93,7 +93,7 @@ const onSubmit = e => {
 			swal("Thanks!", "We will contact you shortly!", "success");
 			document.querySelector(".send-mail-form").reset();
 		} else {
-			swal("Noooo!", "you need to fill in all required fields!", "error");
+			swal("Ooops!", "Something went wrong!", "error");
 		}
 	});
 };
